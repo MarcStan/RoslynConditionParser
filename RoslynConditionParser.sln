@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynConditionParser", "RoslynConditionParser\RoslynConditionParser.csproj", "{620D0F35-159B-40E1-BF63-613E0CFA958E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoslynConditionParser.Core", "RoslynConditionParser.Core\RoslynConditionParser.Core.csproj", "{39815062-832D-45EC-B37A-2D9B7D8A3F58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{620D0F35-159B-40E1-BF63-613E0CFA958E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620D0F35-159B-40E1-BF63-613E0CFA958E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620D0F35-159B-40E1-BF63-613E0CFA958E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620D0F35-159B-40E1-BF63-613E0CFA958E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39815062-832D-45EC-B37A-2D9B7D8A3F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39815062-832D-45EC-B37A-2D9B7D8A3F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39815062-832D-45EC-B37A-2D9B7D8A3F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39815062-832D-45EC-B37A-2D9B7D8A3F58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95AEF83C-37AF-4312-8D31-8AB4B6BB51AE}
+	EndGlobalSection
+EndGlobal
